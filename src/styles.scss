@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/vars";
+@import "./assets/scss/fonts";
+@import "./assets/scss/common";
+
+.page {
+  padding: 37px 0;
+
+  .mat-progress-spinner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 8px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: 460px) {
+    padding: 0 25px;
+  }
+}
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  grid-auto-rows: auto;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 460px) {
+    grid-template-columns: repeat(auto-fill, 190px);
+    justify-content: start;
+  }
+}
+
+.section-ttl {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 0 15px;
+  text-align: center;
+
+  &.error {
+    color: red;
+  }
+
+  @media (min-width: 460px) {
+    text-align: left;
+  }
+}
+
+.dialogMovie {
+  .mat-dialog-container {
+    width: 756px;
+    max-width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+}
+
+.filterArea {
+  display: flex;
+  align-items: flex-end;
+
+  .mat-form-field {
+    margin-right: 16px;
+  }
+}

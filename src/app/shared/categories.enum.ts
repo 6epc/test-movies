@@ -1,0 +1,13 @@
+export enum Categories {
+  DRAMA = 1,
+  BIO,
+  HISTORY,
+  FANTASY,
+  ADVENTURE,
+  ACTION,
+  CARTOON,
+  COMEDY,
+  THRILLER,
+  DETECTIVE,
+  FANTASTIC,
+}

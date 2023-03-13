@@ -1,0 +1,28 @@
+<div (click)="openDialog()" class="movie-card">
+  <div class="movie-preview">
+    <img
+      src="/images/{{ movie.id }}.jpeg"
+      width="150"
+      height="225"
+      [alt]="movie.name"
+    />
+  </div>
+  <h4 class="movie-title">{{ movie.name }}</h4>
+
+  <div class="categories">
+    <ng-container *ngFor="let item of movie.genre; let i = index">
+      <span class="category">
+        {{ item }}
+        <ng-container *ngIf="i !== movie.genre.length - 1">,</ng-container>
+      </span>
+    </ng-container>
+  </div>
+
+  <div class="movie-date">{{ movie.year }}</div>
+
+  <button mat-icon-button class="favorite-btn" (click)="addFavorite($event)">
+    <mat-icon>
+      {{ favoriteId === movie.id ? "favorite" : "favorite_outline" }}
+    </mat-icon>
+  </button>
+</div>

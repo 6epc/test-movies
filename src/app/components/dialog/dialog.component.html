@@ -1,0 +1,34 @@
+<div class="content">
+  <div class="movie-preview">
+    <img
+      src="/images/{{ data.id }}.jpeg"
+      width="150px"
+      height="225px"
+      [alt]="data.name"
+    />
+  </div>
+  <div class="text-data">
+    <h2 class="title">{{ data.name }}</h2>
+    <div class="movie-categories">
+      <ng-container *ngFor="let category of data.genre; let i = index">
+        <span class="category">
+          {{ category }}
+          <ng-container *ngIf="i !== data.genre.length - 1">,</ng-container>
+        </span>
+      </ng-container>
+    </div>
+    <div class="movie-date">{{ data.year }}</div>
+    <div class="movie-description">{{ data.description }}</div>
+
+    <div class="actions">
+      <button
+        mat-button
+        [color]="favoriteId !== data.id ? 'primary' : 'accent'"
+        (click)="handleFavorite()"
+        mat-dialog-close>
+        {{ favoriteId !== data.id ? "Выбрать лучшим фильмом" : "Удалить из лучших фильмов" }}
+      </button>
+      <button mat-button color="accent" mat-dialog-close>Закрыть</button>
+    </div>
+  </div>
+</div>

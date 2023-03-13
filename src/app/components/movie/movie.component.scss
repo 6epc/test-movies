@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(29, 24, 56, 0.1);
+  margin-bottom: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 10px 10px 15px rgba(29, 24, 56, 0.4);
+    .favorite-btn {
+      opacity: 1;
+    }
+  }
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 10px;
+}
+
+.movie-date {
+  margin-bottom: 10px;
+}
+
+.favorite-btn {
+  transition: all 0.3s;
+  // opacity: 0;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.categories {
+  margin: 0 0 10px;
+}
+
+.movie-preview {
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
