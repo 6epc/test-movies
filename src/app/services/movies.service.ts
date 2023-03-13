@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, delay, Observable, throwError } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 
 export interface Movie {
   id?: number;
