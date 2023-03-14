@@ -61,17 +61,31 @@
 }
 
 .dialogMovie {
+
+  &.cdk-overlay-pane {
+    max-width: 90vw !important;
+  }
+
   .mat-dialog-container {
     width: 756px;
     max-width: 100%;
     padding: 15px 20px;
     border-radius: 10px;
+
+    @media (max-width: 500px) {
+      padding: 12px;
+    }
   }
 }
 
 .filterArea {
   display: flex;
-  align-items: flex-end;
+
+  @media(max-width:500px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
   .mat-form-field {
     margin-right: 16px;
