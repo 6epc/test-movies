@@ -23,7 +23,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
